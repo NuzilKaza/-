@@ -17,6 +17,13 @@ namespace Snake
             Console.WriteLine("Point creating");
         }
 
+        public Point(Point P)
+        {
+            x = P.x;
+            y = P.y;
+            sym = P.sym;
+        }
+
         public Point(int _x, int _y, char _sym)
         {
             x = _x;
