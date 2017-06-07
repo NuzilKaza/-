@@ -29,7 +29,7 @@ namespace Snake
             Point head = GetNextPoint();
             pList.Add(head);
 
-            //tail.Clear();
+            tail.Clear();
             head.Draw();
         }
 
