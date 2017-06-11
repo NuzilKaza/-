@@ -33,6 +33,7 @@ namespace Snake
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey();
+                    Console.Write('\b');
                     snake.HandleKey(key.Key);
                 }
                 Thread.Sleep(100);

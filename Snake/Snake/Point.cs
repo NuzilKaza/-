@@ -12,11 +12,6 @@ namespace Snake
         public int y;
         public char sym;
 
-        public Point()
-        {
-            Console.WriteLine("Point creating");
-        }
-
         public Point(Point P)
         {
             x = P.x;
@@ -36,13 +31,19 @@ namespace Snake
             if (direction == Direction.RIGHT) x += offset;
             else if (direction == Direction.LEFT) x -= offset;
             else if (direction == Direction.DOWN) y += offset;
-            else y -= offset;
+            else if (direction == Direction.TOP) y -= offset;
         }
 
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
         }
 
         public override string ToString()
